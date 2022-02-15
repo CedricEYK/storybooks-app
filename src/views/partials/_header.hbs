@@ -1,0 +1,29 @@
+<nav class="grey darken-3">
+  <div class="nav-wrapper container">
+
+    <a href="#!" class="brand-logo center">StoryBooks</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="fa fa-bars"></i></a>
+    <ul class="sidenav" id="mobile-demo">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="/img/intro.jpg">
+        </div>
+        <a href="#user"><img class="circle" src={{image}}></a>
+        {{#if name}}
+        <a href="#name"><span class="white-text name">{{name}}</span></a>
+        {{/if}}
+        {{#if email}}
+        <a href="#email"><span class="white-text email">{{email}}</span></a>
+        {{/if}}
+      </div>
+    </li>
+    <li><a href="/stories"><i class="material-icons">forum</i>Stories</a></li>
+    <li><a href="/dashboard"><i class="material-icons">dashboard</i>Dashboard</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="waves-effect" href="/auth/logout"><i class="fa fa-sign-out"></i>LogOut</a></li>
+    </ul>
+  </div>
+</nav>

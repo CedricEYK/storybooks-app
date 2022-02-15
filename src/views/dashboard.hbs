@@ -1,0 +1,45 @@
+<h6>Dahsboard</h6>
+{{#if email}}
+<h3>Welcome {{email}}</h3>
+{{/if}}
+{{#if name}}
+<h3>Welcome {{name}}</h3>
+{{/if}}
+<p>Here are your stories</p>
+
+
+{{#if stories}}
+<table class="stripped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each stories}}
+    <tr>
+      <td><a href="/stories/{{_id}}">{{title}}</a></td>
+      <td>{{formatDate createdAt 'dddd, MMMM Do YYYY, h:mm:ss a'}}</td>
+      <td><span class="dash-status">{{status}}</span></td>
+      <td>
+        <a href="/stories/edit/{{_id}}" class="btn btn-float">
+          <i class="fa fa-edit"></i>
+        </a>
+        <form action="/stories/{{_id}}" method="POST" id="delete-form">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="hidden" name="_csrf" value="{{../csrfToken}}">
+          <button type="submit" class="btn red">
+            <i class="fa fa-trash"></i>
+          </button>
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<p>You have not created any stories</p>
+{{/if}}

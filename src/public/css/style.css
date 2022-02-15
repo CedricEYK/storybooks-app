@@ -1,0 +1,39 @@
+p {
+  margin: 10px 0 !important;
+}
+
+.login-container {
+  width: 400px;
+  margin-top: 50px !important;
+  margin: auto;
+  text-align: center;
+}
+
+#dividerline {
+  margin-top: 9px;
+}
+
+.user-message {
+  margin: auto;
+  width: 90%;
+  border: 1px solid rgb(24, 24, 194);
+  padding: 0.5rem;
+  border-radius: 3px;
+  background: rgb(94, 175, 250);
+  text-align: center;
+}
+
+.user-message--error {
+  border-color: red;
+  background: rgb(236, 136, 136);
+  color: red;
+}
+
+.btn-float {
+  float: left;
+  margin-right: 10px;
+}
+
+.fa-small {
+  font-size: 16px !important;
+}
